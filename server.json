@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Ao molho",
       "description": "Macarrão ao molho branco, fughi e cheiro verde das montanhas",
-      "price": "19.90",
+      "price": "20,00",
       "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png"
     },
@@ -21,8 +21,16 @@
       "name": "A la Camarón",
       "description": "Macarrão com vegetais de primeira linha e camarão dos 7 mares.",
       "price": "25.90",
-      "available": false,
+      "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
+    },
+    {
+      "image": "https://catracalivre.com.br/wp-content/thumbnails/2OYTqtZioG5ErLHPFxmbYGR6CuY=/wp-content/uploads/2018/10/m3c-6903-due-cuochi-primeiro-prato-talharim-de-massa-fresca-camaroes-legumes-crocantes-azeite-ao-manjericao-foto-johnny-mazzilli-bx-1-450x300.jpg",
+      "name": "Moda italina 2",
+      "price": "25.50",
+      "description": "Comida tipica Italiana",
+      "available": true,
+      "id": 4
     }
   ]
 }

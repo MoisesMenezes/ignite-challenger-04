@@ -6,11 +6,16 @@ import {
 } from 'react';
 
 import { useField } from '@unform/core';
-
 import { Container } from './styles';
 
-const Input = ({ name, icon: Icon, ...rest }) => {
-  const inputRef = useRef(null);
+
+export interface InputProps {
+  placeholder: string;
+  name: string;
+}
+
+export function Input({name,placeholder}:InputProps) {
+  const inputRef =useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
@@ -35,19 +40,16 @@ const Input = ({ name, icon: Icon, ...rest }) => {
     });
   }, [fieldName, registerField]);
 
-  return (
+
+  return(
     <Container isFilled={isFilled} isFocused={isFocused}>
-      {Icon && <Icon size={20} />}
-
-      <input
-        onFocus={handleInputFocus}
-        onBlur={handleInputBlur}
-        defaultValue={defaultValue}
-        ref={inputRef}
-        {...rest}
-      />
-    </Container>
-  );
-};
-
-export default Input;
+    <input
+      onFocus={handleInputFocus}
+      onBlur={handleInputBlur}
+      defaultValue={defaultValue}
+      ref={inputRef}
+      placeholder={placeholder}
+    />
+  </Container>
+  )
+}
